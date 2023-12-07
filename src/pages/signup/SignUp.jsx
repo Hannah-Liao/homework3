@@ -5,7 +5,6 @@ import registerImg from '../../assets/sign_up.svg';
 
 const SignUp = () => {
 	const [username, setUsername] = useState('');
-	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 
 	const navigate = useNavigate();
@@ -17,7 +16,7 @@ const SignUp = () => {
 
 	return (
 		<section className='auth'>
-			<img src={registerImg} alt='' />
+			<img src={registerImg} alt='register imgage' />
 
 			<div className='auth-container'>
 				<form onSubmit={handleSubmit}>
@@ -29,15 +28,6 @@ const SignUp = () => {
 							placeholder='username'
 							value={username}
 							onChange={(e) => setUsername(e.target.value)}
-						/>
-					</div>
-					<div className='form-group'>
-						<input
-							type='email'
-							id='email'
-							placeholder='Email'
-							value={email}
-							onChange={(e) => setEmail(e.target.value)}
 						/>
 					</div>
 
