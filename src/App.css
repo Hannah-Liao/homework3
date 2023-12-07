@@ -1,1 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Island+Moments&family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: var(--font-name);
+}
+
+:root {
+	--primary-color: #1c6758;
+	--secondary-color: #bdd2b6;
+	--text-color: #6e7074;
+	--font-name: 'Poppins', sans-serif;
+}
+
+section {
+	padding: 5% 4%;
+}
+
+h2 {
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+.auth {
+	display: flex;
+}
+
+.auth img {
+	width: 60%;
+}
+
+.auth-container {
+	padding: 50px;
+	background-color: var(--secondary-color);
+	border-radius: 5px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+	width: 100%;
+}
+
+.auth-container h2 {
+	margin-bottom: 3rem;
+	text-align: center;
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+}
+
+input {
+	padding: 10px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: none;
+}
+
+input:focus {
+	outline: none;
+}
+
+.auth_btn {
+	background: var(--primary-color) !important;
+	width: 100%;
+	color: #fff !important;
+	cursor: pointer;
+}
+
+/* ========== responsive design ========== */
+@media screen and (max-width: 992px) {
+	.auth img {
+		width: 50%;
+		padding: 3%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.auth img {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 576px) {
+	.auth-container {
+		padding: 30px;
+	}
+}
