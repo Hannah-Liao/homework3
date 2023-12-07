@@ -1,16 +1,25 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 
 import registerImg from '../../assets/sign_up.svg';
+import { AuthContext } from '../../context/AuthContext.js';
 
 const SignUp = () => {
 	const [username, setUsername] = useState('');
 	const [password, setPassword] = useState('');
 
+	const { dispatch } = useContext(AuthContext);
 	const navigate = useNavigate();
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
+		dispatch({
+			type: 'REGISTER_SUCCESS',
+			payload: {
+				user: username,
+				pw: password,
+			},
+		});
 		navigate('/login');
 	};
 
